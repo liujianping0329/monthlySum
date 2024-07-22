@@ -1,8 +1,10 @@
 package com.monthlysum.controller;
 
+import com.monthlysum.controller.common.ResCommonVO;
 import com.monthlysum.entity.MonthInfo;
 import com.monthlysum.query.MonthInfoQuery;
 import com.monthlysum.service.MonthInfoService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,15 +28,21 @@ public class MonthInfoV2Controller {
     }
 
     @PostMapping("/search")
-    public ResponseEntity<List<MonthInfo>> getMonthInfoByConditions(@RequestBody MonthInfoQuery monthInfoQuery) {
+    public ResponseEntity<ResCommonVO<List<MonthInfo>>> getMonthInfoByConditions(@RequestBody MonthInfoQuery monthInfoQuery) {
         List<MonthInfo> monthInfoList = monthInfoService.findMonthInfoByConditions(monthInfoQuery);
-        return ResponseEntity.ok(monthInfoList);
+        return ResponseEntity.ok(new ResCommonVO<>(monthInfoList));
     }
     @GetMapping("/{id}")
     public ResponseEntity<MonthInfo> getItemById(@PathVariable("id") Long id) {
         Optional<MonthInfo> monthInfo = monthInfoService.findItemById(id);
         return monthInfo.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ResCommonVO<Long>> deleteItemById(@PathVariable("id") Long id) {
+        Boolean isDeleted = monthInfoService.deleteMonthInfoById(id);
+        return isDeleted? ResponseEntity.ok(new ResCommonVO<>(id))
+                : new ResponseEntity(new ResCommonVO<>(HttpStatus.NOT_FOUND.value(), "Item not found",id), HttpStatus.NOT_FOUND);
     }
 
 

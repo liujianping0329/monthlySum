@@ -30,6 +30,14 @@ public class MonthInfoService {
         return monthInfoRepository.findById(id);
     }
 
+    public Boolean deleteMonthInfoById(Long id) {
+        if (monthInfoRepository.existsById(id)){
+            monthInfoRepository.deleteById(id);
+            return true;
+        }
+        else return false;
+    }
+
     public List<MonthInfo> findMonthInfoByConditions(MonthInfoQuery monthInfoQuery) {
 
         return monthInfoRepository.findAll((root, criteriaQuery, criteriaBuilder) -> {

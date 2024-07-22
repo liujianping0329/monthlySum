@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:replace="~{layout :: layout(~{::title}, ~{::body/content()})}">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<main>
+    <table id="mainTable" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>月份</th>
+            <th>日元</th>
+            <th>人民币</th>
+            <th>汇率</th>
+            <th>总和</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Data will be loaded via AJAX -->
+        </tbody>
+    </table>
+</main>
+</body>
+</html>
