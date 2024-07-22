@@ -1,22 +1,21 @@
 package com.monthlysum.controller;
 
 import com.monthlysum.entity.MonthInfo;
+import com.monthlysum.query.MonthInfoQuery;
 import com.monthlysum.service.MonthInfoService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/monthInfo")
-public class MonthInfoController {
+@RequestMapping("/api/v2/monthInfo")
+public class MonthInfoV2Controller {
 
     private final MonthInfoService monthInfoService;
 
-    public MonthInfoController(MonthInfoService monthInfoService) {
+    public MonthInfoV2Controller(MonthInfoService monthInfoService) {
         this.monthInfoService = monthInfoService;
     }
 
@@ -26,6 +25,11 @@ public class MonthInfoController {
         return ResponseEntity.ok(monthInfoList);
     }
 
+    @PostMapping("/search")
+    public ResponseEntity<List<MonthInfo>> getMonthInfoByConditions(@RequestBody MonthInfoQuery monthInfoQuery) {
+        List<MonthInfo> monthInfoList = monthInfoService.findMonthInfoByConditions(monthInfoQuery);
+        return ResponseEntity.ok(monthInfoList);
+    }
     @GetMapping("/{id}")
     public ResponseEntity<MonthInfo> getItemById(@PathVariable("id") Long id) {
         Optional<MonthInfo> monthInfo = monthInfoService.findItemById(id);
