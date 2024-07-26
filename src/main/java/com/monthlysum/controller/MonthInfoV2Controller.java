@@ -3,6 +3,7 @@ package com.monthlysum.controller;
 import com.monthlysum.controller.common.ResCommonVO;
 import com.monthlysum.entity.MonthInfo;
 import com.monthlysum.query.MonthInfoQuery;
+import com.monthlysum.query.MonthInfoUpsertQuery;
 import com.monthlysum.service.MonthInfoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +46,11 @@ public class MonthInfoV2Controller {
                 : new ResponseEntity(new ResCommonVO<>(HttpStatus.NOT_FOUND.value(), "Item not found",id), HttpStatus.NOT_FOUND);
     }
 
+    @PostMapping("/upsert")
+    public ResponseEntity<ResCommonVO<Long>> upsertMonthInfo(@RequestBody MonthInfoUpsertQuery monthInfoUpsertQuery) {
+        Long id = monthInfoService.upsertMonthInfo(monthInfoUpsertQuery);
+        return ResponseEntity.ok(new ResCommonVO<>(id));
+    }
 
 //
 //    @PostMapping

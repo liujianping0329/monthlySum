@@ -2,6 +2,7 @@ package com.monthlysum.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.math.BigDecimal;
 import java.util.Date;
@@ -28,5 +29,8 @@ public class MonthInfo extends BaseEntity {
 
     @Column(precision = 10, scale = 2)
     private BigDecimal sum;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal increase;
 
 }

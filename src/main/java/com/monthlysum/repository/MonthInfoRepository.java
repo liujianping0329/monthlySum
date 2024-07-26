@@ -13,5 +13,5 @@ public interface MonthInfoRepository extends JpaRepository<MonthInfo, Long> , Jp
 
     List<MonthInfo> findMonthInfosByMonthGreaterThan(Date monthStart);
 
-    List<MonthInfo> findMonthInfosByMonthLessThan(Date monthEnd);
+    List<MonthInfo> findMonthInfosByMonthLessThanOrderByMonthDesc(Date monthEnd);
 }

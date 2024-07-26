@@ -8,9 +8,9 @@ import java.util.Date;
 @Data
 public class MonthInfoQuery {
 
-    @JsonFormat(pattern = "yyyyMMdd", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date monthStart;
 
-    @JsonFormat(pattern = "yyyyMMdd", timezone = "GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date monthEnd;
 }
