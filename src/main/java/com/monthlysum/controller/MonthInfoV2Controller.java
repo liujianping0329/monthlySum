@@ -1,22 +1,24 @@
 package com.monthlysum.controller;
 
+import com.monthlysum.controller.common.ResCommonVO;
 import com.monthlysum.entity.MonthInfo;
+import com.monthlysum.query.MonthInfoQuery;
+import com.monthlysum.query.MonthInfoUpsertQuery;
 import com.monthlysum.service.MonthInfoService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/monthInfo")
-public class MonthInfoController {
+@RequestMapping("/api/v2/monthInfo")
+public class MonthInfoV2Controller {
 
     private final MonthInfoService monthInfoService;
 
-    public MonthInfoController(MonthInfoService monthInfoService) {
+    public MonthInfoV2Controller(MonthInfoService monthInfoService) {
         this.monthInfoService = monthInfoService;
     }
 
@@ -26,13 +28,29 @@ public class MonthInfoController {
         return ResponseEntity.ok(monthInfoList);
     }
 
+    @PostMapping("/search")
+    public ResponseEntity<ResCommonVO<List<MonthInfo>>> getMonthInfoByConditions(@RequestBody MonthInfoQuery monthInfoQuery) {
+        List<MonthInfo> monthInfoList = monthInfoService.findMonthInfoByConditions(monthInfoQuery);
+        return ResponseEntity.ok(new ResCommonVO<>(monthInfoList));
+    }
     @GetMapping("/{id}")
     public ResponseEntity<MonthInfo> getItemById(@PathVariable("id") Long id) {
         Optional<MonthInfo> monthInfo = monthInfoService.findItemById(id);
         return monthInfo.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ResCommonVO<Long>> deleteItemById(@PathVariable("id") Long id) {
+        Boolean isDeleted = monthInfoService.deleteMonthInfoById(id);
+        return isDeleted? ResponseEntity.ok(new ResCommonVO<>(id))
+                : new ResponseEntity(new ResCommonVO<>(HttpStatus.NOT_FOUND.value(), "Item not found",id), HttpStatus.NOT_FOUND);
+    }
 
+    @PostMapping("/upsert")
+    public ResponseEntity<ResCommonVO<Long>> upsertMonthInfo(@RequestBody MonthInfoUpsertQuery monthInfoUpsertQuery) {
+        Long id = monthInfoService.upsertMonthInfo(monthInfoUpsertQuery);
+        return ResponseEntity.ok(new ResCommonVO<>(id));
+    }
 
 //
 //    @PostMapping

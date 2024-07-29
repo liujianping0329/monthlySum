@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   mysql:
     image: 'mysql:latest'
@@ -8,5 +10,21 @@ services:
       - 'MYSQL_USER=myuser'
     ports:
       - '3307:3306'
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
 
+  springboot-app:
+    build: .
+    ports:
+      - '8081:8080'
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+volumes:
+  db_data:
 

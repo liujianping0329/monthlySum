@@ -1,21 +1,36 @@
 package com.monthlysum.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.DynamicUpdate;
+
+import java.math.BigDecimal;
+import java.util.Date;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class MonthInfo extends BaseEntity {
 
-    private String month;
+    @Temporal(TemporalType.DATE)
+    private Date month;
 
-    private String jpMoney;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal jpMoney;
 
-    private String cnMoney;
+    @Column(precision = 10, scale = 2)
+    private BigDecimal cnMoney;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal rate;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal sum;
+
+    @Column(precision = 10, scale = 2)
+    private BigDecimal increase;
 
 }
