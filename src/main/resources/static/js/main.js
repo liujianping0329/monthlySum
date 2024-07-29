@@ -191,7 +191,7 @@ $(document).ready(function() {
             },
             yAxis: yConfig,
             series: [{
-                name: '销售额',
+                name: '金额',
                 type: 'bar',
                 data: chartData,
                 label: {
