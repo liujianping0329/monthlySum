@@ -1,3 +1,6 @@
+# 定义版本号变量
+ARG VERSION=0.0.1-SNAPSHOT
+
 # 使用官方 OpenJDK 21 运行时作为父镜像
 FROM openjdk:21-slim AS build
 
@@ -21,10 +24,10 @@ FROM openjdk:21-slim
 WORKDIR /app
 
 # 将构建好的 JAR 文件复制到容器中
-COPY --from=build /app/target/monthlySum-0.0.1-SNAPSHOT.jar /app/monthlySum-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/monthlySum-${VERSION}.jar /app/monthlySum-${VERSION}.jar
 
 # 使端口 8080 可供此容器外的环境使用
 EXPOSE 8080
 
 # 在容器启动时运行应用程序
-CMD ["java", "-jar", "monthlySum-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "monthlySum-${VERSION}.jar"]
