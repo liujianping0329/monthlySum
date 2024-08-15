@@ -92,7 +92,9 @@ $(document).ready(function() {
                 $.postJSON('/api/v2/monthInfo/upsert',
                     {
                         "month": $(this).find(".month").val(),
-                        "jpMoney": $(this).find("#jpy").val(),
+                        "jpMoney": parseFloat($(this).find("#jpyl").val())
+                            + parseFloat($(this).find("#jpyk").val())
+                            + parseFloat($(this).find("#jpyc").val()),
                         "cnMoney": $(this).find("#cny").val(),
                         "rate": $(this).find("#rate").text()
                     }, response => {
@@ -147,6 +149,12 @@ $(document).ready(function() {
         $("#dialogUpdate").find("#rate").text(data.rate);
 
         $("#dialogUpdate").find("#id").val(data.id);
+    }).on('click', '.delete', function() {
+        let data = mainTable.row($(this).closest('tr')).data();
+
+        $.post('/api/v2/monthInfo/delete', {id: data.id}, response => {
+            mainTable.ajax.reload(); // 刷新表格数据
+        });
     });
 
     $( "#dialogChart fieldset input" ).checkboxradio();
@@ -183,10 +191,10 @@ $(document).ready(function() {
             },
             tooltip: {},
             xAxis: {
-                data: $.map(mainTable.data(),(item,index)=>item.month).reverse(),
+                data: $.map(mainTable.data(),(item,index)=>item.month.substring(2,7)).reverse(),
                 axisLabel: {
                     interval: 0, // 强制显示所有标签
-                    rotate: 45   // 如果标签因长度问题重叠，可以考虑旋转标签
+                    rotate: 0   // 如果标签因长度问题重叠，可以考虑旋转标签
                 }
             },
             yAxis: yConfig,

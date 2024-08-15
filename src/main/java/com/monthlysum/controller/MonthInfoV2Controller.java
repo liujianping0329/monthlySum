@@ -39,8 +39,8 @@ public class MonthInfoV2Controller {
         return monthInfo.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<ResCommonVO<Long>> deleteItemById(@PathVariable("id") Long id) {
+    @PostMapping("/delete")
+    public ResponseEntity<ResCommonVO<Long>> deleteItemById(@RequestParam("id") Long id) {
         Boolean isDeleted = monthInfoService.deleteMonthInfoById(id);
         return isDeleted? ResponseEntity.ok(new ResCommonVO<>(id))
                 : new ResponseEntity(new ResCommonVO<>(HttpStatus.NOT_FOUND.value(), "Item not found",id), HttpStatus.NOT_FOUND);
