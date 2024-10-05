@@ -9,313 +9,512 @@ $.postJSON = function (url, data, callback) {
     });
 };
 let data = {
-    "recipe": [{"id": 1, "name": "麻婆茄子"}, {"id": 2, "name": "麻婆豆腐四川"}, {
-        "id": 3,
-        "name": "麻婆豆腐广东"
-    }, {"id": 4, "name": "青椒肉丝"}, {"id": 5, "name": "棒棒鸡"}, {"id": 6, "name": "黑醋醋猪"}, {
-        "id": 7,
-        "name": "醋猪"
-    }, {"id": 8, "name": "回锅肉"}, {"id": 9, "name": "猪肉豆芽"}, {"id": 10, "name": "八宝菜"}, {
-        "id": 11,
-        "name": "干烧虾仁"
-    }, {"id": 12, "name": "四川式回锅肉"}, {"id": 13, "name": "猪肉黑醋炒"}, {
-        "id": 14,
-        "name": "白菜奶油煮"
-    }, {"id": 15, "name": "甘口麻婆茄子"}, {"id": 16, "name": "广东五目饭"}, {
-        "id": 17,
-        "name": "上海甘辛猪饭"
-    }, {"id": 18, "name": "四川辛鸡饭"}, {"id": 19, "name": "极麻辣麻婆豆腐"}],
-    "material": [{"id": 1, "name": "茄子"}, {"id": 2, "name": "ピーマン"}, {"id": 3, "name": "胡萝卜"}, {
-        "id": 4,
+    "recipe": [{"id": 1.0, "name": "C麻婆茄子"}, {"id": 2.0, "name": "C麻婆豆腐四川"}, {
+        "id": 3.0,
+        "name": "C麻婆豆腐广东"
+    }, {"id": 4.0, "name": "C青椒肉丝"}, {"id": 5.0, "name": "C棒棒鸡"}, {"id": 6.0, "name": "C黑醋醋猪"}, {
+        "id": 7.0,
+        "name": "C醋猪"
+    }, {"id": 8.0, "name": "C回锅肉"}, {"id": 9.0, "name": "C猪肉豆芽"}, {"id": 10.0, "name": "C八宝菜"}, {
+        "id": 11.0,
+        "name": "C干烧虾仁"
+    }, {"id": 12.0, "name": "C四川式回锅肉"}, {"id": 13.0, "name": "C猪肉黑醋炒"}, {
+        "id": 14.0,
+        "name": "C白菜奶油煮"
+    }, {"id": 15.0, "name": "C甘口麻婆茄子"}, {"id": 16.0, "name": "C广东五目饭"}, {
+        "id": 17.0,
+        "name": "C上海甘辛猪饭"
+    }, {"id": 18.0, "name": "C四川辛鸡饭"}, {"id": 19.0, "name": "C极麻辣麻婆豆腐"}, {
+        "id": 20.0,
+        "name": "D番茄牛肉"
+    }, {"id": 21.0, "name": "D柠檬手撕鸡"}, {"id": 22.0, "name": "D家常豆腐"}, {
+        "id": 23.0,
+        "name": "芹菜家常鸡腿"
+    }, {"id": 24.0, "name": "鸡丁三色豆"}],
+    "material": [{"id": 1.0, "name": "茄子"}, {"id": 2.0, "name": "青椒"}, {"id": 3.0, "name": "胡萝卜"}, {
+        "id": 4.0,
         "name": "猪绞肉"
-    }, {"id": 5, "name": "豆腐"}, {"id": 6, "name": "葱"}, {"id": 7, "name": "牛肉薄切り"}, {
-        "id": 8,
+    }, {"id": 5.0, "name": "豆腐"}, {"id": 6.0, "name": "葱"}, {"id": 7.0, "name": "牛肉薄切り"}, {
+        "id": 8.0,
         "name": "水煮たけのこ"
-    }, {"id": 9, "name": "片栗粉"}, {"id": 10, "name": "鶏もも肉"}, {"id": 11, "name": "きゅうり"}, {
-        "id": 12,
+    }, {"id": 9.0, "name": "片栗粉"}, {"id": 10.0, "name": "鶏もも肉"}, {"id": 11.0, "name": "黄瓜"}, {
+        "id": 12.0,
         "name": "豚肉"
-    }, {"id": 13, "name": "卵"}, {"id": 14, "name": "塩・こしょう"}, {"id": 15, "name": "たまねぎ"}, {
-        "id": 16,
+    }, {"id": 13.0, "name": "卵"}, {"id": 14.0, "name": "塩・こしょう"}, {"id": 15.0, "name": "洋葱"}, {
+        "id": 16.0,
         "name": "生しいたけ（または干ししいたけ）"
-    }, {"id": 17, "name": "キャベツ"}, {"id": 18, "name": "もやし"}, {"id": 19, "name": "にら"}, {
-        "id": 20,
+    }, {"id": 17.0, "name": "卷心菜"}, {"id": 18.0, "name": "豆芽"}, {"id": 19.0, "name": "韭菜"}, {
+        "id": 20.0,
         "name": "白菜"
-    }, {"id": 21, "name": "いか"}, {"id": 22, "name": "えび（むきえび）"}, {
-        "id": 23,
+    }, {"id": 21.0, "name": "鱿鱼"}, {"id": 22.0, "name": "虾（むきえび）"}, {
+        "id": 23.0,
         "name": "ぶなしめじ"
-    }, {"id": 24, "name": "水"}, {"id": 25, "name": "チンゲン菜"}],
+    }, {"id": 24.0, "name": "水"}, {"id": 25.0, "name": "青江菜"}, {"id": 26.0, "name": "牛肉"}, {
+        "id": 27.0,
+        "name": "耗油"
+    }, {"id": 28.0, "name": "酱油"}, {"id": 29.0, "name": "白糖"}, {"id": 30.0, "name": "淀粉"}, {
+        "id": 31.0,
+        "name": "油"
+    }, {"id": 32.0, "name": "蒜末"}, {"id": 33.0, "name": "番茄"}, {"id": 34.0, "name": "糖"}, {
+        "id": 35.0,
+        "name": "视频"
+    }, {"id": 36.0, "name": "柠檬"}, {"id": 37.0, "name": "蒜"}, {"id": 38.0, "name": "香菜"}, {
+        "id": 39.0,
+        "name": "白醋"
+    }, {"id": 40.0, "name": "芝麻"}, {"id": 41.0, "name": "硬豆腐"}, {"id": 42.0, "name": "木耳"}, {
+        "id": 43.0,
+        "name": "水淀粉"
+    }, {"id": 44.0, "name": "芹菜"}, {"id": 45.0, "name": "胡椒粉"}, {"id": 46.0, "name": "酱汁"}, {
+        "id": 47.0,
+        "name": "白胡椒粉"
+    }, {"id": 48.0, "name": "料酒"}, {"id": 49.0, "name": "低筋面粉"}, {"id": 50.0, "name": "三色豆"}, {
+        "id": 51.0,
+        "name": "盐"
+    }, {"id": 52.0, "name": "芝麻油"}],
     "recipe_material_r": [{
-        "id": 1,
-        "recipe_id": 1,
-        "material_id": 1,
-        "num": 5,
+        "id": 1.0,
+        "recipe_id": 1.0,
+        "material_id": 1.0,
+        "num": 5.0,
         "unit": "个",
         "remark": "約350g"
-    }, {"id": 2, "recipe_id": 1, "material_id": 2, "num": 2, "unit": "个", "remark": "約40g"}, {
-        "id": 3,
-        "recipe_id": 1,
-        "material_id": 3,
+    }, {"id": 2.0, "recipe_id": 1.0, "material_id": 2.0, "num": 2.0, "unit": "个", "remark": "約40g"}, {
+        "id": 3.0,
+        "recipe_id": 1.0,
+        "material_id": 3.0,
         "num": 0.25,
         "unit": "个",
         "remark": "約50g"
-    }, {"id": 4, "recipe_id": 1, "material_id": 4, "num": 120, "unit": "g", "remark": ""}, {
-        "id": 5,
-        "recipe_id": 2,
-        "material_id": 4,
-        "num": 80,
-        "unit": "g",
-        "remark": ""
-    }, {"id": 6, "recipe_id": 2, "material_id": 5, "num": 1, "unit": "丁", "remark": "約350～400g"}, {
-        "id": 7,
-        "recipe_id": 2,
-        "material_id": 6,
+    }, {"id": 4.0, "recipe_id": 1.0, "material_id": 4.0, "num": 120.0, "unit": "g"}, {
+        "id": 5.0,
+        "recipe_id": 2.0,
+        "material_id": 4.0,
+        "num": 80.0,
+        "unit": "g"
+    }, {"id": 6.0, "recipe_id": 2.0, "material_id": 5.0, "num": 1.0, "unit": "丁", "remark": "約350～400g"}, {
+        "id": 7.0,
+        "recipe_id": 2.0,
+        "material_id": 6.0,
         "num": 0.3,
         "unit": "本",
         "remark": "約30g"
-    }, {"id": 8, "recipe_id": 3, "material_id": 4, "num": 80, "unit": "g", "remark": ""}, {
-        "id": 9,
-        "recipe_id": 3,
-        "material_id": 5,
-        "num": 1,
+    }, {"id": 8.0, "recipe_id": 3.0, "material_id": 4.0, "num": 80.0, "unit": "g"}, {
+        "id": 9.0,
+        "recipe_id": 3.0,
+        "material_id": 5.0,
+        "num": 1.0,
         "unit": "丁",
         "remark": "約350～400g"
-    }, {"id": 10, "recipe_id": 3, "material_id": 6, "num": 0.3, "unit": "本", "remark": "約30g"}, {
-        "id": 11,
-        "recipe_id": 4,
-        "material_id": 7,
-        "num": 150,
-        "unit": "g",
-        "remark": ""
-    }, {"id": 12, "recipe_id": 4, "material_id": 2, "num": 6, "unit": "个", "remark": "約130g"}, {
-        "id": 13,
-        "recipe_id": 4,
-        "material_id": 8,
-        "num": 150,
-        "unit": "g",
-        "remark": ""
-    }, {"id": 14, "recipe_id": 4, "material_id": 9, "num": 1, "unit": "大さじ1", "remark": ""}, {
-        "id": 15,
-        "recipe_id": 5,
-        "material_id": 10,
+    }, {"id": 10.0, "recipe_id": 3.0, "material_id": 6.0, "num": 0.3, "unit": "本", "remark": "約30g"}, {
+        "id": 11.0,
+        "recipe_id": 4.0,
+        "material_id": 7.0,
+        "num": 150.0,
+        "unit": "g"
+    }, {"id": 12.0, "recipe_id": 4.0, "material_id": 2.0, "num": 6.0, "unit": "个", "remark": "約130g"}, {
+        "id": 13.0,
+        "recipe_id": 4.0,
+        "material_id": 8.0,
+        "num": 150.0,
+        "unit": "g"
+    }, {"id": 14.0, "recipe_id": 4.0, "material_id": 9.0, "num": 1.0, "unit": "大さじ1"}, {
+        "id": 15.0,
+        "recipe_id": 5.0,
+        "material_id": 10.0,
         "num": 0.5,
         "unit": "枚",
         "remark": "約130g"
-    }, {"id": 16, "recipe_id": 5, "material_id": 11, "num": 1, "unit": "本", "remark": "約100g"}, {
-        "id": 17,
-        "recipe_id": 6,
-        "material_id": 12,
-        "num": 250,
+    }, {"id": 16.0, "recipe_id": 5.0, "material_id": 11.0, "num": 1.0, "unit": "本", "remark": "約100g"}, {
+        "id": 17.0,
+        "recipe_id": 6.0,
+        "material_id": 12.0,
+        "num": 250.0,
         "unit": "g",
         "remark": "豚肩ロースまたは豚バラなど、トンカツ用の豚肉でも可"
-    }, {"id": 18, "recipe_id": 6, "material_id": 13, "num": 0.5, "unit": "个", "remark": ""}, {
-        "id": 19,
-        "recipe_id": 6,
-        "material_id": 9,
-        "num": 2,
-        "unit": "大さじ",
-        "remark": ""
-    }, {"id": 20, "recipe_id": 6, "material_id": 14, "num": 1, "unit": "g", "remark": "少々"}, {
-        "id": 21,
-        "recipe_id": 6,
-        "material_id": 15,
+    }, {"id": 18.0, "recipe_id": 6.0, "material_id": 13.0, "num": 0.5, "unit": "个"}, {
+        "id": 19.0,
+        "recipe_id": 6.0,
+        "material_id": 9.0,
+        "num": 2.0,
+        "unit": "大さじ"
+    }, {"id": 20.0, "recipe_id": 6.0, "material_id": 14.0, "num": 1.0, "unit": "g", "remark": "少々"}, {
+        "id": 21.0,
+        "recipe_id": 6.0,
+        "material_id": 15.0,
         "num": 0.5,
         "unit": "个",
         "remark": "約100g"
-    }, {"id": 22, "recipe_id": 6, "material_id": 2, "num": 2, "unit": "个", "remark": "約40g"}, {
-        "id": 23,
-        "recipe_id": 7,
-        "material_id": 12,
-        "num": 250,
+    }, {"id": 22.0, "recipe_id": 6.0, "material_id": 2.0, "num": 2.0, "unit": "个", "remark": "約40g"}, {
+        "id": 23.0,
+        "recipe_id": 7.0,
+        "material_id": 12.0,
+        "num": 250.0,
         "unit": "g",
         "remark": "もも肉"
-    }, {"id": 24, "recipe_id": 7, "material_id": 15, "num": 0.5, "unit": "个", "remark": "約150g"}, {
-        "id": 25,
-        "recipe_id": 7,
-        "material_id": 2,
-        "num": 2,
+    }, {"id": 24.0, "recipe_id": 7.0, "material_id": 15.0, "num": 0.5, "unit": "个", "remark": "約150g"}, {
+        "id": 25.0,
+        "recipe_id": 7.0,
+        "material_id": 2.0,
+        "num": 2.0,
         "unit": "个",
         "remark": "約40g"
-    }, {"id": 26, "recipe_id": 7, "material_id": 3, "num": 0.25, "unit": "个", "remark": "約50g"}, {
-        "id": 27,
-        "recipe_id": 7,
-        "material_id": 13,
+    }, {"id": 26.0, "recipe_id": 7.0, "material_id": 3.0, "num": 0.25, "unit": "个", "remark": "約50g"}, {
+        "id": 27.0,
+        "recipe_id": 7.0,
+        "material_id": 13.0,
         "num": 0.5,
-        "unit": "个",
-        "remark": ""
-    }, {"id": 28, "recipe_id": 7, "material_id": 16, "num": 3, "unit": "枚", "remark": ""}, {
-        "id": 29,
-        "recipe_id": 7,
-        "material_id": 9,
-        "num": 2,
-        "unit": "大さじ",
-        "remark": ""
-    }, {"id": 30, "recipe_id": 7, "material_id": 14, "num": 1, "unit": "g", "remark": "少々"}, {
-        "id": 31,
-        "recipe_id": 8,
-        "material_id": 12,
-        "num": 200,
+        "unit": "个"
+    }, {"id": 28.0, "recipe_id": 7.0, "material_id": 16.0, "num": 3.0, "unit": "枚"}, {
+        "id": 29.0,
+        "recipe_id": 7.0,
+        "material_id": 9.0,
+        "num": 2.0,
+        "unit": "大さじ"
+    }, {"id": 30.0, "recipe_id": 7.0, "material_id": 14.0, "num": 1.0, "unit": "g", "remark": "少々"}, {
+        "id": 31.0,
+        "recipe_id": 8.0,
+        "material_id": 12.0,
+        "num": 200.0,
         "unit": "g",
         "remark": "バラ薄切り"
-    }, {"id": 32, "recipe_id": 8, "material_id": 2, "num": 2, "unit": "个", "remark": "約40g"}, {
-        "id": 33,
-        "recipe_id": 8,
-        "material_id": 17,
+    }, {"id": 32.0, "recipe_id": 8.0, "material_id": 2.0, "num": 2.0, "unit": "个", "remark": "約40g"}, {
+        "id": 33.0,
+        "recipe_id": 8.0,
+        "material_id": 17.0,
         "num": 0.25,
         "unit": "个",
         "remark": "約300g"
-    }, {"id": 34, "recipe_id": 8, "material_id": 6, "num": 0.5, "unit": "本", "remark": "約40g"}, {
-        "id": 35,
-        "recipe_id": 9,
-        "material_id": 12,
-        "num": 200,
+    }, {"id": 34.0, "recipe_id": 8.0, "material_id": 6.0, "num": 0.5, "unit": "本", "remark": "約40g"}, {
+        "id": 35.0,
+        "recipe_id": 9.0,
+        "material_id": 12.0,
+        "num": 200.0,
         "unit": "g",
         "remark": "ロース薄切り"
-    }, {"id": 36, "recipe_id": 9, "material_id": 18, "num": 1, "unit": "袋", "remark": "約200～250g"}, {
-        "id": 37,
-        "recipe_id": 9,
-        "material_id": 19,
-        "num": 1,
-        "unit": "束",
-        "remark": "約100g"
-    }, {"id": 38, "recipe_id": 9, "material_id": 9, "num": 1, "unit": "大さじ", "remark": ""}, {
-        "id": 39,
-        "recipe_id": 10,
-        "material_id": 12,
-        "num": 100,
+    }, {
+        "id": 36.0,
+        "recipe_id": 9.0,
+        "material_id": 18.0,
+        "num": 1.0,
+        "unit": "袋",
+        "remark": "約200～250g"
+    }, {"id": 37.0, "recipe_id": 9.0, "material_id": 19.0, "num": 1.0, "unit": "束", "remark": "約100g"}, {
+        "id": 38.0,
+        "recipe_id": 9.0,
+        "material_id": 9.0,
+        "num": 1.0,
+        "unit": "大さじ"
+    }, {
+        "id": 39.0,
+        "recipe_id": 10.0,
+        "material_id": 12.0,
+        "num": 100.0,
         "unit": "g",
         "remark": "バラ薄切り"
-    }, {"id": 40, "recipe_id": 10, "material_id": 20, "num": 250, "unit": "g", "remark": "葉2～3枚程度"}, {
-        "id": 41,
-        "recipe_id": 10,
-        "material_id": 3,
-        "num": 0.16,
-        "unit": "本",
-        "remark": "約30g"
-    }, {"id": 42, "recipe_id": 10, "material_id": 16, "num": 3, "unit": "枚", "remark": "約40g"}, {
-        "id": 43,
-        "recipe_id": 10,
-        "material_id": 21,
-        "num": 50,
+    }, {
+        "id": 40.0,
+        "recipe_id": 10.0,
+        "material_id": 20.0,
+        "num": 250.0,
+        "unit": "g",
+        "remark": "葉2～3枚程度"
+    }, {"id": 41.0, "recipe_id": 10.0, "material_id": 3.0, "num": 0.16, "unit": "本", "remark": "約30g"}, {
+        "id": 42.0,
+        "recipe_id": 10.0,
+        "material_id": 16.0,
+        "num": 3.0,
+        "unit": "枚",
+        "remark": "約40g"
+    }, {
+        "id": 43.0,
+        "recipe_id": 10.0,
+        "material_id": 21.0,
+        "num": 50.0,
         "unit": "g",
         "remark": "中サイズ半分"
-    }, {"id": 44, "recipe_id": 10, "material_id": 22, "num": 6, "unit": "尾", "remark": "約50g"}, {
-        "id": 45,
-        "recipe_id": 11,
-        "material_id": 22,
-        "num": 250,
+    }, {"id": 44.0, "recipe_id": 10.0, "material_id": 22.0, "num": 6.0, "unit": "尾", "remark": "約50g"}, {
+        "id": 45.0,
+        "recipe_id": 11.0,
+        "material_id": 22.0,
+        "num": 250.0,
         "unit": "g",
         "remark": "から付きの場合は16～20尾（約300g）"
-    }, {"id": 46, "recipe_id": 11, "material_id": 6, "num": 0.3, "unit": "本", "remark": "約30g"}, {
-        "id": 47,
-        "recipe_id": 11,
-        "material_id": 9,
-        "num": 1,
-        "unit": "大さじ",
-        "remark": ""
-    }, {"id": 48, "recipe_id": 12, "material_id": 12, "num": 250, "unit": "g", "remark": "バラ薄切り"}, {
-        "id": 49,
-        "recipe_id": 12,
-        "material_id": 17,
-        "num": 0.16,
-        "unit": "个",
-        "remark": "約200g"
-    }, {"id": 50, "recipe_id": 12, "material_id": 6, "num": 0.5, "unit": "本", "remark": "約40g"}, {
-        "id": 51,
-        "recipe_id": 13,
-        "material_id": 12,
-        "num": 250,
+    }, {"id": 46.0, "recipe_id": 11.0, "material_id": 6.0, "num": 0.3, "unit": "本", "remark": "約30g"}, {
+        "id": 47.0,
+        "recipe_id": 11.0,
+        "material_id": 9.0,
+        "num": 1.0,
+        "unit": "大さじ"
+    }, {
+        "id": 48.0,
+        "recipe_id": 12.0,
+        "material_id": 12.0,
+        "num": 250.0,
         "unit": "g",
         "remark": "バラ薄切り"
-    }, {"id": 52, "recipe_id": 13, "material_id": 2, "num": 3, "unit": "个", "remark": "約60g"}, {
-        "id": 53,
-        "recipe_id": 13,
-        "material_id": 6,
-        "num": 1,
+    }, {"id": 49.0, "recipe_id": 12.0, "material_id": 17.0, "num": 0.16, "unit": "个", "remark": "約200g"}, {
+        "id": 50.0,
+        "recipe_id": 12.0,
+        "material_id": 6.0,
+        "num": 0.5,
+        "unit": "本",
+        "remark": "約40g"
+    }, {
+        "id": 51.0,
+        "recipe_id": 13.0,
+        "material_id": 12.0,
+        "num": 250.0,
+        "unit": "g",
+        "remark": "バラ薄切り"
+    }, {"id": 52.0, "recipe_id": 13.0, "material_id": 2.0, "num": 3.0, "unit": "个", "remark": "約60g"}, {
+        "id": 53.0,
+        "recipe_id": 13.0,
+        "material_id": 6.0,
+        "num": 1.0,
         "unit": "本",
         "remark": "約100g"
     }, {
-        "id": 54,
-        "recipe_id": 14,
-        "material_id": 20,
+        "id": 54.0,
+        "recipe_id": 14.0,
+        "material_id": 20.0,
         "num": 0.125,
         "unit": "株",
         "remark": "約350g，キャベツ1/4（300g）でも可"
-    }, {"id": 55, "recipe_id": 14, "material_id": 10, "num": 150, "unit": "g", "remark": ""}, {
-        "id": 56,
-        "recipe_id": 14,
-        "material_id": 23,
+    }, {"id": 55.0, "recipe_id": 14.0, "material_id": 10.0, "num": 150.0, "unit": "g"}, {
+        "id": 56.0,
+        "recipe_id": 14.0,
+        "material_id": 23.0,
         "num": 0.5,
         "unit": "パック",
         "remark": "約50g，またはしいたけ…中5枚"
-    }, {"id": 57, "recipe_id": 14, "material_id": 24, "num": 1, "unit": "カップ", "remark": "200㎖"}, {
-        "id": 58,
-        "recipe_id": 15,
-        "material_id": 4,
-        "num": 120,
-        "unit": "g",
-        "remark": ""
-    }, {"id": 59, "recipe_id": 15, "material_id": 1, "num": 5, "unit": "个", "remark": "約350g"}, {
-        "id": 60,
-        "recipe_id": 15,
-        "material_id": 2,
-        "num": 2,
+    }, {
+        "id": 57.0,
+        "recipe_id": 14.0,
+        "material_id": 24.0,
+        "num": 1.0,
+        "unit": "カップ",
+        "remark": "200㎖"
+    }, {"id": 58.0, "recipe_id": 15.0, "material_id": 4.0, "num": 120.0, "unit": "g"}, {
+        "id": 59.0,
+        "recipe_id": 15.0,
+        "material_id": 1.0,
+        "num": 5.0,
         "unit": "个",
-        "remark": "約40g"
-    }, {"id": 61, "recipe_id": 15, "material_id": 3, "num": 0.25, "unit": "本", "remark": "約50g"}, {
-        "id": 62,
-        "recipe_id": 15,
-        "material_id": 6,
-        "num": 0.3,
+        "remark": "約350g"
+    }, {"id": 60.0, "recipe_id": 15.0, "material_id": 2.0, "num": 2.0, "unit": "个", "remark": "約40g"}, {
+        "id": 61.0,
+        "recipe_id": 15.0,
+        "material_id": 3.0,
+        "num": 0.25,
         "unit": "本",
-        "remark": "約30g"
-    }, {"id": 63, "recipe_id": 16, "material_id": 12, "num": 100, "unit": "g", "remark": "バラ薄切り"}, {
-        "id": 64,
-        "recipe_id": 16,
-        "material_id": 22,
-        "num": 12,
-        "unit": "尾",
+        "remark": "約50g"
+    }, {"id": 62.0, "recipe_id": 15.0, "material_id": 6.0, "num": 0.3, "unit": "本", "remark": "約30g"}, {
+        "id": 63.0,
+        "recipe_id": 16.0,
+        "material_id": 12.0,
+        "num": 100.0,
+        "unit": "g",
+        "remark": "バラ薄切り"
+    }, {"id": 64.0, "recipe_id": 16.0, "material_id": 22.0, "num": 12.0, "unit": "尾", "remark": "約100g"}, {
+        "id": 65.0,
+        "recipe_id": 16.0,
+        "material_id": 25.0,
+        "num": 1.0,
+        "unit": "株",
         "remark": "約100g"
-    }, {"id": 65, "recipe_id": 16, "material_id": 25, "num": 1, "unit": "株", "remark": "約100g"}, {
-        "id": 66,
-        "recipe_id": 16,
-        "material_id": 3,
-        "num": 0.16,
-        "unit": "本",
-        "remark": "約30g"
-    }, {"id": 67, "recipe_id": 16, "material_id": 16, "num": 3, "unit": "枚", "remark": "約40g"}, {
-        "id": 68,
-        "recipe_id": 17,
-        "material_id": 12,
-        "num": 3,
+    }, {"id": 66.0, "recipe_id": 16.0, "material_id": 3.0, "num": 0.16, "unit": "本", "remark": "約30g"}, {
+        "id": 67.0,
+        "recipe_id": 16.0,
+        "material_id": 16.0,
+        "num": 3.0,
+        "unit": "枚",
+        "remark": "約40g"
+    }, {
+        "id": 68.0,
+        "recipe_id": 17.0,
+        "material_id": 12.0,
+        "num": 3.0,
         "unit": "枚",
         "remark": "約300g，ロースとんかつ用肉"
-    }, {"id": 69, "recipe_id": 17, "material_id": 25, "num": 3, "unit": "株", "remark": "約300g"}, {
-        "id": 70,
-        "recipe_id": 17,
-        "material_id": 16,
-        "num": 3,
+    }, {"id": 69.0, "recipe_id": 17.0, "material_id": 25.0, "num": 3.0, "unit": "株", "remark": "約300g"}, {
+        "id": 70.0,
+        "recipe_id": 17.0,
+        "material_id": 16.0,
+        "num": 3.0,
         "unit": "枚",
         "remark": "約40g"
-    }, {"id": 71, "recipe_id": 18, "material_id": 10, "num": 1, "unit": "枚", "remark": "約250g"}, {
-        "id": 72,
-        "recipe_id": 18,
-        "material_id": 2,
-        "num": 2,
+    }, {"id": 71.0, "recipe_id": 18.0, "material_id": 10.0, "num": 1.0, "unit": "枚", "remark": "約250g"}, {
+        "id": 72.0,
+        "recipe_id": 18.0,
+        "material_id": 2.0,
+        "num": 2.0,
         "unit": "个",
         "remark": "約40g"
-    }, {"id": 73, "recipe_id": 18, "material_id": 15, "num": 0.5, "unit": "个", "remark": "約100g"}, {
-        "id": 74,
-        "recipe_id": 18,
-        "material_id": 9,
-        "num": 1,
-        "unit": "小さじ",
-        "remark": ""
-    }, {"id": 75, "recipe_id": 19, "material_id": 4, "num": 100, "unit": "g", "remark": ""}, {
-        "id": 76,
-        "recipe_id": 19,
-        "material_id": 5,
-        "num": 1,
+    }, {"id": 73.0, "recipe_id": 18.0, "material_id": 15.0, "num": 0.5, "unit": "个", "remark": "約100g"}, {
+        "id": 74.0,
+        "recipe_id": 18.0,
+        "material_id": 9.0,
+        "num": 1.0,
+        "unit": "小さじ"
+    }, {"id": 75.0, "recipe_id": 19.0, "material_id": 4.0, "num": 100.0, "unit": "g"}, {
+        "id": 76.0,
+        "recipe_id": 19.0,
+        "material_id": 5.0,
+        "num": 1.0,
         "unit": "丁",
         "remark": "約350～400g"
-    }, {"id": 77, "recipe_id": 19, "material_id": 6, "num": 0.3, "unit": "本", "remark": "約30g"}]
+    }, {"id": 77.0, "recipe_id": 19.0, "material_id": 6.0, "num": 0.3, "unit": "本", "remark": "約30g"}, {
+        "id": 78.0,
+        "recipe_id": 20.0,
+        "material_id": 26.0,
+        "num": " ",
+        "unit": "若干"
+    }, {"id": 79.0, "recipe_id": 20.0, "material_id": 27.0, "num": " ", "unit": "若干"}, {
+        "id": 80.0,
+        "recipe_id": 20.0,
+        "material_id": 28.0,
+        "num": " ",
+        "unit": "若干"
+    }, {"id": 81.0, "recipe_id": 20.0, "material_id": 29.0, "num": " ", "unit": "若干"}, {
+        "id": 82.0,
+        "recipe_id": 20.0,
+        "material_id": 30.0,
+        "num": " ",
+        "unit": "若干"
+    }, {
+        "id": 83.0,
+        "recipe_id": 20.0,
+        "material_id": 31.0,
+        "num": " ",
+        "unit": "若干",
+        "remark": "加油后腌制10m后开大火炒8m"
+    }, {"id": 84.0, "recipe_id": 20.0, "material_id": 32.0, "num": " ", "unit": "若干"}, {
+        "id": 85.0,
+        "recipe_id": 20.0,
+        "material_id": 33.0,
+        "num": " ",
+        "unit": "若干"
+    }, {"id": 86.0, "recipe_id": 20.0, "material_id": 14.0, "num": " ", "unit": "若干"}, {
+        "id": 87.0,
+        "recipe_id": 20.0,
+        "material_id": 34.0,
+        "num": " ",
+        "unit": "若干"
+    }, {
+        "id": 88.0,
+        "recipe_id": 20.0,
+        "material_id": 35.0,
+        "num": " ",
+        "unit": " ",
+        "remark": "<a target=\"_blank\" href=\"https://www.douyin.com/user/self?from_tab_name=main&modal_id=7236292731834797372&showSubTab=RECORD&showTab=record\">抖音教程<\/a>"
+    }, {"id": 89.0, "recipe_id": 21.0, "material_id": 37.0, "num": 3.0, "unit": "瓣"}, {
+        "id": 90.0,
+        "recipe_id": 21.0,
+        "material_id": 6.0,
+        "num": 1.0,
+        "unit": "根"
+    }, {"id": 91.0, "recipe_id": 21.0, "material_id": 28.0, "num": 2.0, "unit": "勺"}, {
+        "id": 92.0,
+        "recipe_id": 21.0,
+        "material_id": 38.0,
+        "num": " ",
+        "unit": "适量"
+    }, {"id": 93.0, "recipe_id": 21.0, "material_id": 34.0, "num": 1.0, "unit": "勺"}, {
+        "id": 94.0,
+        "recipe_id": 21.0,
+        "material_id": 39.0,
+        "num": 2.0,
+        "unit": "勺"
+    }, {"id": 95.0, "recipe_id": 21.0, "material_id": 10.0, "num": 3.0, "unit": "个"}, {
+        "id": 96.0,
+        "recipe_id": 21.0,
+        "material_id": 27.0,
+        "num": 1.0,
+        "unit": "勺"
+    }, {"id": 97.0, "recipe_id": 21.0, "material_id": 40.0, "num": " ", "unit": "适量"}, {
+        "id": 98.0,
+        "recipe_id": 22.0,
+        "material_id": 41.0,
+        "num": 1.0,
+        "unit": "块"
+    }, {"id": 99.0, "recipe_id": 22.0, "material_id": 42.0, "num": " ", "unit": "适量"}, {
+        "id": 100.0,
+        "recipe_id": 22.0,
+        "material_id": 6.0,
+        "num": 1.0,
+        "unit": "根"
+    }, {"id": 101.0, "recipe_id": 22.0, "material_id": 32.0, "num": " ", "unit": "适量"}, {
+        "id": 102.0,
+        "recipe_id": 22.0,
+        "material_id": 28.0,
+        "num": 2.0,
+        "unit": "勺"
+    }, {"id": 103.0, "recipe_id": 22.0, "material_id": 27.0, "num": 1.0, "unit": "勺"}, {
+        "id": 104.0,
+        "recipe_id": 22.0,
+        "material_id": 43.0,
+        "num": " ",
+        "unit": "勾芡"
+    }, {"id": 105.0, "recipe_id": 23.0, "material_id": 10.0, "num": 1.0, "unit": "个"}, {
+        "id": 106.0,
+        "recipe_id": 23.0,
+        "material_id": 44.0,
+        "num": 2.0,
+        "unit": "根"
+    }, {"id": 107.0, "recipe_id": 23.0, "material_id": 37.0, "num": 2.0, "unit": "颗"}, {
+        "id": 108.0,
+        "recipe_id": 23.0,
+        "material_id": 28.0,
+        "num": 2.0,
+        "unit": "勺"
+    }, {"id": 109.0, "recipe_id": 23.0, "material_id": 45.0, "num": " ", "unit": "适量"}, {
+        "id": 110.0,
+        "recipe_id": 23.0,
+        "material_id": 9.0,
+        "num": " ",
+        "unit": "适量"
+    }, {"id": 111.0, "recipe_id": 23.0, "material_id": 46.0, "num": " ", "unit": "↓"}, {
+        "id": 112.0,
+        "recipe_id": 23.0,
+        "material_id": 27.0,
+        "num": 1.0,
+        "unit": "勺"
+    }, {"id": 113.0, "recipe_id": 23.0, "material_id": 28.0, "num": 1.0, "unit": "勺"}, {
+        "id": 114.0,
+        "recipe_id": 24.0,
+        "material_id": 10.0,
+        "num": 1.0,
+        "unit": "个",
+        "remark": "腌制10分钟"
+    }, {"id": 115.0, "recipe_id": 24.0, "material_id": 47.0, "num": " ", "unit": "适量"}, {
+        "id": 116.0,
+        "recipe_id": 24.0,
+        "material_id": 48.0,
+        "num": " ",
+        "unit": "适量"
+    }, {"id": 117.0, "recipe_id": 24.0, "material_id": 49.0, "num": 1.0, "unit": "勺"}, {
+        "id": 118.0,
+        "recipe_id": 24.0,
+        "material_id": 50.0,
+        "num": " ",
+        "unit": "适量"
+    }, {"id": 119.0, "recipe_id": 24.0, "material_id": 46.0, "num": " ", "unit": "↓"}, {
+        "id": 120.0,
+        "recipe_id": 24.0,
+        "material_id": 51.0,
+        "num": 0.5,
+        "unit": "勺"
+    }, {"id": 121.0, "recipe_id": 24.0, "material_id": 34.0, "num": 1.0, "unit": "勺"}, {
+        "id": 122.0,
+        "recipe_id": 24.0,
+        "material_id": 47.0,
+        "num": " ",
+        "unit": "适量"
+    }, {"id": 123.0, "recipe_id": 24.0, "material_id": 52.0, "num": " ", "unit": "适量"}, {
+        "id": 124.0,
+        "recipe_id": 24.0,
+        "material_id": 49.0,
+        "num": 0.5,
+        "unit": "勺"
+    }, {"id": 125.0, "recipe_id": 24.0, "material_id": 24.0, "num": " ", "unit": "适量"}]
 };
