@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:replace="~{layout :: layout(~{::title}, ~{::body/content()})}">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<script src="../static/js/dish_data.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js"></script>
+<div id="hiddenData" hidden>
+    <div id="dishHtml">
+        <div class="dish">
+            <div class="dishName">
+            </div>
+            <div class="materials">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<main>
+    <div class="dayDishes">
+        <div class="dayDishCon">
+            <div class="dayDishBar">
+                <button class="resetBtn">重置</button>
+                <span>初始菜名</span>
+                <button class="detailBtn">展开</button>
+            </div>
+            <div class="dayDishDetail">
+            </div>
+        </div>
+        <div class="dayDishCon">
+            <div class="dayDishBar">
+                <button class="resetBtn">重置</button>
+                <span>初始菜名</span>
+                <button class="detailBtn">展开</button>
+            </div>
+            <div class="dayDishDetail">
+            </div>
+        </div>
+    </div>
+
+    <div class="dayDishes">
+        <div class="dayDishCon">
+            <div class="dayDishBar">
+                <button class="resetBtn">重置</button>
+                <span>初始菜名</span>
+                <button class="detailBtn">展开</button>
+            </div>
+            <div class="dayDishDetail">
+            </div>
+        </div>
+        <div class="dayDishCon">
+            <div class="dayDishBar">
+                <button class="resetBtn">重置</button>
+                <span>初始菜名</span>
+                <button class="detailBtn">展开</button>
+            </div>
+            <div class="dayDishDetail">
+            </div>
+        </div>
+    </div>
+
+
+</main>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:replace="~{layout :: layout(~{::title}, ~{::body/content()})}">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<script src="../static/js/dish_data.js"></script>
+<div id="hiddenData" hidden>
+    <div id="dishHtml">
+        <div class="dish">
+            <div class="dishName">
+            </div>
+            <div class="materials">
+                <div class="materialContainer">
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+<main>
+    <div id="toolBar">
+        <button>加一道菜</button>
+        <button>重置</button>
+    </div>
+
+
+</main>
+</body>
+</html>
