@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     $(".dayDishCon").each(function (i, item) {
-        let recipeId = Cookies.get('dish_' + i);
+        let recipeId = Number(Cookies.get('dish_' + i));
         if (recipeId !== undefined) {
             getDish(recipeId, $(this));
         }

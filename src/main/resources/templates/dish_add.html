@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" th:replace="~{layout :: layout(~{::title}, ~{::body/content()})}">
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+<div id="hiddenData" hidden>
+    <div id="materialRowHtml">
+        <div class="materialRow">
+            <span>X</span><br>
+            <label>原料: </label><input class="material" required/>
+            <br>
+            <label>数量: </label><input class="amount" type="number"/>
+            <br>
+            <label>单位: </label><input class="unit"/>
+            <br>
+            <label>备注: </label><input class="remark"/>
+        </div>
+    </div>
+</div>
+<main>
+    <label for="dishName">菜品名称:</label><input type="text" id="dishName" required/>
+    <hr>
+    <div id="materialsCon">
+        <div class="materialRow">
+            <span>1.</span><br>
+            <label>原料: </label><input class="material" required/>
+            <br>
+            <label>数量: </label><input class="amount" type="number"/>
+            <br>
+            <label>单位: </label><input class="unit"/>
+            <br>
+            <label>备注: </label><input class="remark"/>
+        </div>
+        <button id="addMaterial">新增一条原料信息</button>
+        <button id="removeMaterial">删除一条原料信息</button>
+    </div>
+    <br>
+    <button id="resBtn">生成信息并复制</button>
+    <br><br>
+    <textarea id="result"></textarea>
+
+</main>
+</body>
+</html>

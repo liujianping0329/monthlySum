@@ -14,6 +14,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 
 import java.io.InputStream;
+import java.text.DecimalFormat;
 
 import static org.apache.poi.ss.usermodel.CellType.STRING;
 
@@ -45,8 +46,9 @@ public class ExlUtils {
                     }
                     JSONObject jsonObjectRow = new JSONObject();
                     for (Cell cell : row) {
-                        jsonObjectRow.put(sheet.getRow(0).getCell(cell.getColumnIndex()).getStringCellValue()
-                                , cell.getCellType() == STRING ? cell.getStringCellValue() : cell.getNumericCellValue());
+                        String objKey = "";
+                        jsonObjectRow.put(objKey = sheet.getRow(0).getCell(cell.getColumnIndex()).getStringCellValue()
+                                , cell.getCellType() == STRING ? cell.getStringCellValue() : getCellValue(cell, objKey, sheet.getSheetName()));
                     }
                     jsonObjectSheet.add(jsonObjectRow);
                 }
@@ -56,6 +58,16 @@ public class ExlUtils {
             logger.error("读取Excel文件时发生错误: {}", e.getMessage(), e);
         }
         return jsonObject;
+    }
+
+    private static Object getCellValue(Cell cell, String objKey, String sheetName) {
+        if (sheetName.equals("recipe_material_r") && objKey.equals("num")) {
+            DecimalFormat df = new DecimalFormat("#.#");
+
+            return df.format(cell.getNumericCellValue());
+        }
+
+        return (long) cell.getNumericCellValue();
     }
 
     public static void main(String[] args) throws Exception {
